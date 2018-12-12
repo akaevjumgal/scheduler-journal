@@ -10,7 +10,7 @@ export default class ScheduleHeader extends React.Component<Props, {}> {
     render() {
         return(
             <div className='calendar_header'>
-                Электронный Журнал
+                АСУУС
             </div>
         )
     }

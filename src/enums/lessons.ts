@@ -1,6 +1,6 @@
 export enum LESSON_TYPE {
-    LABORATORY = 'ПРАКТИКА',
-    PRACTICAL = 'ЛАБОРАТОРНАЯ',
+    LABORATORY = 'ЛАБОРАТОРНАЯ',
+    PRACTICAL = 'ПРАКТИКА',
     MODULE = 'МОДУЛЬ',
     EXAM = 'ЭКЗАМЕН'
 }

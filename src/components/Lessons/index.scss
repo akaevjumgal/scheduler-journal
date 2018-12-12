@@ -1,20 +1,18 @@
 @import "../../colors";
 
 .lesson_item {
-  background-color: $practice;
-  padding: 7px 10px;
   color: #FFFFFF;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   height: 100%;
+  min-height: 100px;
   .lesson_info {
     display: flex;
-    margin-bottom: 10px;
     .group_name {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       font-size: 14px;
-      margin: 5px 0;
+      margin: 10px;
       flex: 1;
     }
     .lesson_duration {
@@ -23,13 +21,21 @@
       align-items: center;
       flex: 2;
       font-size: 14px;
+      margin-right: 10px;
     }
   }
   .lesson_description {
-    margin: 10px 0;
+    margin: 10px;
     font-size: 12px;
   }
   .lesson_name {
     font-size: 13px;
+    margin: 10px;
   }
+}
+.practical {
+  background-color: $practice;
+}
+.laboratory {
+  background-color: $laboratory;
 }
