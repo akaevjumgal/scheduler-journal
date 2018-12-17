@@ -1,8 +1,10 @@
-import * as React from 'react'
+import * as React from 'react';
 import Lesson from "../../models/lesson";
 
-import './index.scss'
+import './index.scss';
 import { LESSON_TYPE } from '../../enums/lessons';
+import { observer } from 'mobx-react';
+import { computed, observable } from 'mobx';
 
 interface Props {
     lesson: Lesson.Model
@@ -25,14 +27,35 @@ const LESSON_CARD_TYPE = [
         label: 'exam',
         value: LESSON_TYPE.EXAM
     }
-]
+];
 
-export default class LessonCard extends React.Component<Props, {}> {
+@observer
+class LessonCard extends React.Component<Props, {}> {
+
+    @observable
+    private scheduleRef: React.RefObject<HTMLDivElement>
+
+    constructor(props: any) {
+        super(props)
+
+        this.scheduleRef = React.createRef()
+    }
+
+    @computed
+    get lessonType(): string {
+        return LESSON_CARD_TYPE.find(target => target.value === this.props.lesson.type)!.label;
+    }
+
+    componentDidMount() {
+        this.scheduleRef.current!.scrollLeft = -1000
+    }
+
     render() {
-        const {lesson} = this.props
+        const {lesson} = this.props;
 
         return(
-            <div className={`lesson_item ${LESSON_CARD_TYPE.find(target => target.value === lesson.type)!.label}`}>
+            <div className={['lesson_item', this.lessonType].join(' ')}
+                 ref={this.scheduleRef}>
                 <div className='lesson_info'>
                     <div className='group_name'>
                         {lesson.group.name}
@@ -49,6 +72,8 @@ export default class LessonCard extends React.Component<Props, {}> {
                     {lesson.description}
                 </div>
             </div>
-        )
+        );
     }
 }
+
+export default LessonCard;

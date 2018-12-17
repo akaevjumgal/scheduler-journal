@@ -1,0 +1,59 @@
+@import "../../colors";
+
+.modal {
+  width: 400px;
+  height: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 999999;
+  right: 0;
+  .header {
+    height: 100px;
+    background-color: #E2E2E2;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    .fullName {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+    }
+    .email {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+    }
+  }
+  .nav-item {
+    display: flex;
+    height: 35px;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid $border;
+    cursor: pointer;
+    a {
+      text-decoration: none;
+      color: $font;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  .nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .close {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.87);
+    border-radius: 5px;
+    padding: 1px 5px;
+    cursor: pointer;
+    i {
+      color: $font;
+    }
+  }
+}

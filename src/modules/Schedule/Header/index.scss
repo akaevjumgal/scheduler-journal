@@ -1,0 +1,16 @@
+@import "../../../colors";
+
+.calendar_header {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid $border;
+  .burger_area {
+    font-size: 20px;
+    color: #03A9F4;
+    cursor: pointer;
+  }
+}

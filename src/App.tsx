@@ -3,12 +3,10 @@ import AppRouter from "./routes";
 
 import './index.scss'
 
-class App extends React.Component {
-   render() {
+const App = () => {
     return (
         <AppRouter/>
     )
-  }
 }
 
 export default App

@@ -3,39 +3,47 @@
 .lesson_item {
   color: #FFFFFF;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  height: 100%;
   min-height: 100px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  cursor: pointer;
   .lesson_info {
     display: flex;
     .group_name {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      font-size: 14px;
-      margin: 10px;
       flex: 1;
+      font-size: 18px;
     }
     .lesson_duration {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       flex: 2;
-      font-size: 14px;
-      margin-right: 10px;
+      font-size: 15px;
     }
   }
   .lesson_description {
-    margin: 10px;
-    font-size: 12px;
+    font-size: 15px;
+    padding: 5px 0;
   }
   .lesson_name {
-    font-size: 13px;
-    margin: 10px;
+    font-size: 16px;
+    padding: 5px 0;
   }
 }
 .practical {
   background-color: $practice;
 }
+.practical:hover {
+  background-color: #FFD044;
+  transition: .4s ease;
+}
 .laboratory {
   background-color: $laboratory;
+}
+.laboratory:hover {
+  background-color: #50CC58;
+  transition: .4s ease;
 }
